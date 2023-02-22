@@ -1,0 +1,17 @@
+{
+    // ESLintに対応しているファイルは保存時にESLintによるフォーマットを行う
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    // vueファイル内のJavaScriptに対しVeturを無効にする
+    "vetur.format.defaultFormatter.js": "none",
+    // Vscodeの自動保存は無効
+    "editor.formatOnSave": false,
+    // エディタカラー
+    "workbench.colorCustomizations": {
+        "activityBar.foreground": "#fff",
+        // "activityBar.background": "#9b300f", // api用
+        "activityBar.background": "#0f579b", // client用
+        // "activityBar.background": "#087d50", // admin用
+    },
+}
