@@ -1,0 +1,204 @@
+﻿body {
+	--stroke: #094067;
+	--main: #feffff;
+	--highlight: #2581c4;
+	--secondary: #edf3f7;
+	--tertialy: #ef4565;
+	font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+	background-color: var(--main);
+	color: var(--stroke);
+	animation: fadeIn 1s ease 0s 1 normal;
+    -webkit-animation: fadeIn 1s ease 0s 1 normal;
+}
+#container {
+	margin: 0 auto;
+    width: 90%;
+	max-width: 900px;
+}
+
+section {
+	margin-bottom: 32px;
+}
+
+table.main {
+	width: 100%;
+	margin: 8px 0;
+	border-collapse: collapse;
+}
+table.main tr:not(:last-child) {
+    border-bottom: 1px solid #eaeaea;
+}
+table.main th {
+	background-color: var(--highlight);
+	color: var(--main);
+}
+table.main td {
+	padding: 4px;
+}
+/* FontAwesome */
+i {
+	padding-right: 10px;
+}
+a {
+	color: var(--highlight);
+}
+
+blockquote {
+	margin: 50px;
+    padding: 20px 5%;
+    background-color: var(--secondary);
+}
+
+.align-center {
+	text-align: center;
+}
+.align-right {
+	text-align: right;
+}
+.align-left {
+	text-align: left;
+}
+
+h2 {
+	font-size: 24px;
+	margin-bottom: 24px;
+}
+h3 {
+	font-size: 20px;
+	margin-top: 16px;
+	margin-bottom: 0;
+}
+h3.add-margin {
+	margin-top: 90px;
+}
+h3.uline::after {
+	content: "";
+	display: block;
+	height: 2px;
+	width: 100%;
+	background: -moz-radial-gradient(ellipse farthest-side, #2581c4, rgba(0,0,0,0));
+	background: -webkit-radial-gradient(ellipse farthest-side, #2581c4, rgba(0,0,0,0));
+	background: -ms-radial-gradient(ellipse farthest-side, #2581c4, rgba(0,0,0,0));
+}
+
+h4 {
+	font-size: 18px;
+	margin-top: 16px;
+}
+h4.work-title {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 24px;
+	margin-bottom: 0;
+	border-bottom: 2px solid var(--highlight);
+	padding: 0 8px;
+}
+canvas {
+	margin-bottom: 80px;
+}
+blockquote {
+	margin: 24px 0;
+}
+.careerpage {
+	position: relative;
+}
+.fix-top {
+	position: absolute;
+	top: 20px;
+	right: 40px;
+}
+.flex,
+.skill-chart {
+	display: flex;
+}
+.flex-space {
+	justify-content: space-between;
+	align-items: center;
+}
+.skill-chart .table-wrap,
+.chart-wrap {
+	width: 50%;
+}
+.datetext {
+	margin: 5px;
+	font-weight: bold;
+    color: var(--stroke);
+}
+
+/*
+ *=================================
+ * 読み込み中
+ *=================================
+ */
+#loadwrap {
+	display: none;
+	background-color: #111;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	z-index: 15000;
+}
+#loading {
+	position: absolute;
+	top: 10vh;
+	width: 100vw;
+	font: italic 35px "arial","YuGothic","Yu Gothic","sans-serif";
+	letter-spacing: -3px;
+	color: var(--highlight);
+	text-align: center;
+}
+#loading-logo {
+	width: 50%;
+}
+#sp-loadbar {
+	display: inline-block;
+	width: 200px;
+	height: 2px;
+	background: linear-gradient(90deg, var(--main), var(--highlight), var(--main));
+	background-size: 300px 2px;
+	background-position: 0px 0px;
+	animation: spLoadBar 0.5s infinite linear;
+}
+@keyframes spLoadBar {
+	from { background-position: 0px 0px; }
+	to { background-position: 300px 0px; }
+}
+
+@media screen and (max-width: 640px){
+	table th {
+		display: none;
+	}
+	table tr, table td{
+		display: block;
+		width: 100%;
+		position: relative;
+	}
+	table td:before {
+		content: attr(data-label);
+		background: var(--highlight);
+		box-sizing: border-box;
+		color: var(--main);
+		font-weight: bold;
+		height: 40px;
+		padding: 10px;
+		display: block;
+		margin-bottom: 10px;
+		width: 100%;
+	}
+	table tr {
+		margin-bottom: 20px;
+		/* margin-top: -40px; */
+	}
+	table.main th,
+	table.main td {
+		border: none;
+		padding: 0;
+	}
+	.skill-chart {
+		display: block;
+	}
+	.skill-chart .table-wrap,
+	.chart-wrap {
+		width: 100%;
+	}
+}

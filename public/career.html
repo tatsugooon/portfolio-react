@@ -1,0 +1,540 @@
+<!-- saved from url=(0017)http://localhost/ -->
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width,user-scalable=no" /><!-- レスポンシブデザインのおまじない -->
+	<meta name="theme-color" content="#2692a8">
+	
+	<title>職務経歴書 - 依田 達哉</title>
+	<meta name="description" content="山梨のリモートSE、依田達哉（よだたつや）の職務経歴書" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="common/career.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+</head>
+
+<body>
+<!-- ロード画面 -->
+<div id="loadwrap">
+	<div id="loading">hash<br />
+		<p id="sp-loadbar"></p>
+	</div>
+</div>
+<!-- ここからメイン -->
+<div id="container">
+	<div class="flex flex-space">
+		<h1><i class="fas fa-code"></i>職務経歴書</h1>
+		<p class="align-right">
+			2023年1月現在
+		</p>
+	</div>
+	
+	<h2 class="align-center">｛　プロフィール　｝</h2>
+
+	<blockquote>
+		新卒から約2年間、SESでウォーターフォール開発の上流工程から下流工程までを幅広く経験。<br />
+		2019年7月、受託開発を行う株式会社ノートスペースに入社。PG, SEとして下流工程を経験した後、PMとして上流工程や顧客との仕様・スケジュール調整などを担う。<br />
+		2022年10月、自社開発を行うリマールエステート株式会社に入社。UI/UX改善のためのデザイン作成からスケジュール・品質管理などのマネジメント、エンジニアリングまで全般的なPM業務を担う。
+	</blockquote>
+	<div class="table-wrap">
+		<table class="main">
+			<tr>
+				<th width="25%">名前</th>
+				<th width="25%">生年月日</th>
+				<th width="25%">趣味</th>
+				<th width="25%">WEBサイト</th>
+				<!-- <th width="30%">居住地</th> -->
+			</tr>
+			<tr>
+				<td class="align-center" data-label="名前">
+					<small>よだ　たつや</small><br />
+					<b style="font-size:1.4em">依田 達哉</b><br />
+					<!-- (ニックネーム：hassy) -->
+				</td>
+				<td class="align-center" data-label="生年月日">
+					1994年11月1日
+					（<span id="age"></span>歳）
+					<script>
+						const birthday = { year: 1994, month: 11, date: 1};
+						function getAge(birthday){
+							var today = new Date();
+							var thisYearsBirthday = new Date(today.getFullYear(), birthday.month-1, birthday.date);
+							var age = today.getFullYear() - birthday.year;
+							//今年まだ誕生日が来ていない
+							if (today < thisYearsBirthday) age--;
+							return age;
+						}
+						document.getElementById('age').innerHTML = getAge(birthday);
+					</script>
+				</td>
+				<td class="align-center" data-label="趣味">
+					写真、育児
+				</td>
+				<td data-label="WEBサイト">
+					HASH TRIP
+					<small><a href="https://t-hsn.com/">t-hsn.com</a></small><br />
+					HASH TECH
+					<small><a href="https://t-hsn.com/">tech.t-hsn.com</a></small>
+				</td>
+				<!-- <td class="align-center" data-label="居住地">
+					山梨
+				</td> -->
+			</tr>
+		</table>
+
+		<table class="main">
+			<tr>
+				<th width="50%">得意なこと</th>
+				<th width="50%">資格</th>
+			</tr>
+			<tr>
+				<td data-label="得意なこと">
+					<ul>
+						<li>仕様調整</li>
+						<li>UI/UXデザイン</li>
+						<li>マークアップ（文書構造とデザイン実装）</li>
+						<li>画像・動画編集</li>
+					</ul>
+				</td>
+				<td data-label="資格">
+					<ul>
+						<li>応用情報技術者試験（2022年12月）</li>
+						<li>ウェブデザイン技能検定 3級（2018年12月）</li>
+						<li>普通自動車第1種運転免許（2014年7月）</li>
+						<li>全国商業高等学校協会 簿記実務検定1級（2012年6月）</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+
+		<h3 class="uline align-center">使えるツール</h3>
+		<table class="main">
+			<tbody>
+				<tr>
+					<th>
+						IDE
+					</th>
+					<th>
+						AWS
+					</th>
+					<th>
+						デザイン/編集
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<li>Visual Studio Code</li>
+						<li>Visual Studio</li>
+						<li>Eclipce</li>
+						<li>XCode</li>
+						<li>Android Studio</li>
+					</td>
+					<td>
+						<li>Route53</li>
+						<li>CloudFront</li>
+						<li>EC2</li>
+						<li>ALB</li>
+						<li>SES</li>
+						<li>S3</li>
+						<li>RDS</li>
+						<li>Lambda</li>
+						<li>CloudWatch</li>
+					</td>
+					<td>
+						<li>Adobe Photoshop</li>
+						<li>Adobe Illustrator</li>
+						<li>Adobe After Effects</li>
+						<li>Adobe Premiere Pro</li>
+						<li>Adobe XD</li>
+						<li>Figma</li>
+						<li>AviUtl</li>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<h2 class="align-center">｛　スキルチャート　｝</h2>
+	<div class="skill-chart">
+		<div class="chart-wrap">
+			<h3 class="align-center">
+				総合スキル
+			</h3>
+			<canvas id="chart"></canvas>
+			<p class="align-center">
+				<a href="https://note.com/shufugaishi/n/nc7e698a96e9a"><small>※ 参考</small></a>
+			</p>
+		</div>
+		<div class="chart-wrap">
+			<h3 class="align-center">エンジニアリングスキル</h3>
+			<canvas id="chart2"></canvas>
+			<script src="common/chart.js"></script>
+		</div>
+	</div>
+
+	<h2 class="align-center">｛　職務経歴　｝</h2>
+
+	<section>
+		<h3 class="uline align-center">リマールエステート株式会社</h3>
+		<p class="datetext align-center">2022年10月-現在</p>
+		<blockquote>
+			BtoBにおける不動産業務のDX推進を目的とした、非公開の不動産の売買を支援するプラットフォームを開発・提供する不動産テック企業。
+		</blockquote>
+	
+		<h4 class="work-title">
+			<span>不動産売買システム開発</span>
+			<small class="datetext">2022年10月-現在</small>
+		</h4>
+		<table class="main">
+			<tr>
+				<th width="20%">規模/役割</th>
+				<td width="80%" data-label="規模/役割">3名/PM</td>
+			</tr>
+			<tr>
+				<th>開発環境</th>
+				<td data-label="開発環境">
+					【言語】 React, Nest.js, Nuxt.js, TypeScript, Python<br />
+					【OS】 Mac
+					【管理ツール】 Backlog
+				</td>
+			</tr>
+			<tr>
+				<th>業務内容</th>
+				<td data-label="業務内容">
+					現行システムの保守改修をしながら、リプレース作業を行う。（バックエンド：Python→Nest.js、フロントエンド：Nuxt2系+TypeScript→React+TypeScript）
+				</td>
+			</tr>
+		</table>
+	</section>
+
+	<section>
+		<h3 class="add-margin uline align-center">株式会社ノートスペース</h3>
+		<p class="datetext align-center">2019年7月-2022年9月</p>
+		<blockquote>
+			不動産、医療、エンタメ、教育など幅広いジャンルのWEBシステム・アプリの請負開発実績があり、可用性と汎用性の高いインフラ構成のノウハウも豊富。
+		</blockquote>
+
+		<h4 class="work-title">
+			<span>不動産管理システムおよび利用者用アプリ開発</span>
+			<small class="datetext">2021年11月-2022年7月</small>
+		</h4>
+		<table class="main">
+			<tr>
+				<th width="20%">規模/役割</th>
+				<td width="80%" data-label="規模/役割">6名/PM</td>
+			</tr>
+			<tr>
+				<th>開発環境</th>
+				<td data-label="開発環境">
+					【言語】 Nuxt.js, TypeScript, Python<br />
+					【OS】 Mac<br />
+					【管理ツール】 Backlog
+				</td>
+			</tr>
+			<tr>
+				<th>業務内容</th>
+				<td data-label="業務内容">
+					管理会社向けの不動産管理システムと、それに連携した物件所有者・居住者向けのスマートフォンアプリの開発。アジャイル開発で顧客の細かい要望に応えつつ機能改善の提案も積極的に行い、依頼された以上の成果を収めた。
+				</td>
+			</tr>
+		</table>
+
+		<h4 class="work-title">
+			<span>大手エネルギー会社 家事代行サービス開発</span>
+			<small class="datetext">2021年9月-2021年10月</small>
+		</h4>
+		<table class="main">
+			<tr>
+				<th width="20%">規模/役割</th>
+				<td width="80%" data-label="規模/役割">6名/SE</td>
+			</tr>
+			<tr>
+				<th>開発環境</th>
+				<td data-label="開発環境">
+					【言語】 Nuxt.js, TypeScript, Nest.js<br />
+					【OS】 Mac
+				</td>
+			</tr>
+			<tr>
+				<th>業務内容</th>
+				<td data-label="業務内容">
+					納品前のサービスのスタイル実装・UI改善・リファクタリングを担当。<br />
+					サービス開始に伴い対象地域（広島県）へ出張し、リリース立ち会いやトラブル対応を行った。
+				</td>
+			</tr>
+		</table>
+
+		<h4 class="work-title">
+			<span>私立中学・高等学校 公式サイト開発</span>
+			<small class="datetext">2021年6月-2021年10月</small>
+		</h4>
+		<table class="main">
+			<tr>
+				<th width="20%">規模/役割</th>
+				<td width="80%" data-label="規模/役割">1名/SE</td>
+			</tr>
+			<tr>
+				<th>開発環境</th>
+				<td data-label="開発環境">
+					【言語】 Nuxt.js, TypeScript, Nest.js<br />
+					【OS】 Mac
+				</td>
+			</tr>
+			<tr>
+				<th>業務内容</th>
+				<td data-label="業務内容">
+					学校公式サイトのリニューアルに伴い、WordPressから弊社自作CMSに移行。<br />
+					生徒ログインの機構を追加し、実際の先生や生徒・保護者の声を反映しながら、オペレーションに沿ったシステムを実現した。
+				</td>
+			</tr>
+		</table>
+
+		<h4 class="work-title">
+			<span>不動産売買支援システム開発</span>
+			<small class="datetext">2020年4月-2021年1月</small>
+		</h4>
+		<table class="main">
+			<tr>
+				<th width="20%">規模/役割</th>
+				<td width="80%" data-label="規模/役割">5名/SE</td>
+			</tr>
+			<tr>
+				<th>開発環境</th>
+				<td data-label="開発環境">
+					【言語】 Nuxt.js, TypeScript, Python<br />
+					【OS】 Mac
+				</td>
+			</tr>
+			<tr>
+				<th>業務内容</th>
+				<td data-label="業務内容">
+					不動産オーナーと投資家をマッチングするサービスの開発。<br />
+					物件や顧客の数が多く、フロントエンドとバックエンド両方のパフォーマンス改善が求められ、高速化の知見を深めた。
+				</td>
+			</tr>
+		</table>
+
+		<h4 class="work-title">
+			<span>大手新聞社 英語学習サービス開発</span>
+			<small class="datetext">2019年8月-2019年12月</small>
+		</h4>
+		<table class="main">
+			<tr>
+				<th width="20%">規模/役割</th>
+				<td width="80%" data-label="規模/役割">2名/SE</td>
+			</tr>
+			<tr>
+				<th>開発環境</th>
+				<td data-label="開発環境">
+					【言語】 Nuxt.js, TypeScript, Python 3<br />
+					【OS】 Mac
+				</td>
+			</tr>
+			<tr>
+				<th>業務内容</th>
+				<td data-label="業務内容">
+					英語ニュース音読アプリ（自社製の既存iOSアプリ）のWEB版への移植開発。<br />
+					SEとして企画から設計の打合せ、開発、試験まで全般を行った。
+				</td>
+			</tr>
+		</table>
+
+		<h4 class="work-title">
+			<span>大手リゾートホテル運営会社 予約システム開発</span>
+			<small class="datetext">2019年7月-2020年3月</small>
+		</h4>
+		<table class="main">
+			<tr>
+				<th width="20%">規模/役割</th>
+				<td width="80%" data-label="規模/役割">10名/PG</td>
+			</tr>
+			<tr>
+				<th>開発環境</th>
+				<td data-label="開発環境">
+					【言語】 Nuxt.js, TypeScript, Angular.js, CoffeeScript, Java<br />
+					【OS】 Mac, Windows<br />
+					【管理ツール】 Trello, Backlog, Kintone
+				</td>
+			</tr>
+			<tr>
+				<th>業務内容</th>
+				<td data-label="業務内容">
+					施設の情報、空室状況を横断的に検索できるサービス、および宿泊予約サービスの開発。<br />
+					スクラム開発を本格的に導入しているチームに参画し、フロント開発や試験を行う。
+				</td>
+			</tr>
+		</table>
+
+		<h4 class="work-title">
+			<span>TVアニメ公式サイト制作・運用</span>
+			<small class="datetext">2019年7月-2022年9月</small>
+		</h4>
+		<table class="main">
+			<tr>
+				<th width="20%">規模/役割</th>
+				<td width="80%" data-label="規模/役割">1-2名/PM</td>
+			</tr>
+			<tr>
+				<th>開発環境</th>
+				<td data-label="開発環境">
+					【言語】 React, TypeScript, Python, Nest.js, PHP（WordPress）<br />
+					【OS】 Mac
+				</td>
+			</tr>
+			<tr>
+				<th>業務内容</th>
+				<td data-label="業務内容">
+					複数のアニメ公式サイトの制作と運用を担当。<br />
+					短い製作期間の中、デザイン性・更新頻度・同時アクセス負荷の高さに耐えられるWEBサイトを確実に提供している。ニュースやストーリー情報の更新に独自CMSを使用。
+				</td>
+			</tr>
+		</table>
+	</section>
+
+	<section>
+		<h3 class="add-margin uline align-center">株式会社クレスト</h3>
+		<p class="datetext align-center">2017年4月-2019年6月</p>
+		<blockquote>
+			ソフトウェア開発会社。客先常駐業務をメインに、自社製品開発も行う。
+			<!-- 2年目で社員総会の設営リーダーを行い、全社員向けにコミュニケーション研修を開催し、業務以外でもリーダーシップを発揮した。 -->
+		</blockquote>
+
+		<h4 class="work-title">
+			<span>官庁向け大規模ネットワークシステム開発</span>
+			<small class="datetext">2019年3月-2019年6月</small>
+		</h4>		
+		<table class="main">
+			<tr>
+				<th width="20%">規模/役割</th>
+				<td width="80%" data-label="規模/役割">30名/PG</td>
+			</tr>
+			<tr>
+				<th>開発環境</th>
+				<td data-label="開発環境">
+					【言語】 C# 7, PowerShell<br />
+					【OS】 Windows
+				</td>
+			</tr>
+			<tr>
+				<th>業務内容</th>
+				<td data-label="業務内容">
+					官庁内大規模ネットワークにおける、動静監視システムの開発。<br />
+					既存のJavaソースをC#/SharePointで再構成。セキュアなバックエンド構成について理解を深める。
+				</td>
+			</tr>
+		</table>
+
+		<h4 class="work-title">
+			<span>大型工場向けエネルギー管理システム開発</span>
+			<small class="datetext">2018年7月-2019年2月</small>
+		</h4>
+		<table class="main">
+			<tr>
+				<th width="20%">規模/役割</th>
+				<td width="80%" data-label="規模/役割">6名/PG</td>
+			</tr>
+			<tr>
+				<th>開発環境</th>
+				<td data-label="開発環境">
+					【言語】 Java 10/JSP, jQuery 3<br />
+					【OS】 Windows
+				</td>
+			</tr>
+			<tr>
+				<th>業務内容</th>
+				<td data-label="業務内容">
+					短期間・少人数のチームでフロントエンド経験者がいない中、JSP部分のUI設計と、非同期（Ajax）通信部分の開発を担う。<br />
+					機能設計から客先レビュー、プログラム、結合試験まで携わり、全般的な開発業務を経験する。
+				</td>
+			</tr>
+		</table>
+
+		<h4 class="work-title">
+			<span>LINE@連携 WEB予約システム</span>
+			<small class="datetext">2018年4月-2018年6月</small>
+		</h4>
+		<table class="main">
+			<tr>
+				<th width="20%">規模/役割</th>
+				<td width="80%" data-label="規模/役割">4名/PG</td>
+			</tr>
+			<tr>
+				<th>開発環境</th>
+				<td data-label="開発環境">
+					【言語】 PHP 7.2, HTML/CSS<br />
+					【OS】 Windows, Linux
+				</td>
+			</tr>
+			<tr>
+				<th>業務内容</th>
+				<td data-label="業務内容">
+					自社製品として、医院や小売業をターゲットとしたWEB予約システムの開発。<br />
+					UI仕様とデザインモック作成、Illustratorでのアイコン作成を手掛ける。
+				</td>
+			</tr>
+		</table>
+
+		<h4 class="work-title">
+			<span>公共インフラ業の地図システム開発/保守</span>
+			<small class="datetext">2017年7月-2018年6月</small>
+		</h4>
+
+		<table class="main">
+			<tr>
+				<th width="20%">規模/役割</th>
+				<td width="80%" data-label="規模/役割">1名/PG</td>
+			</tr>
+			<tr>
+				<th>開発環境</th>
+				<td data-label="開発環境">
+					【言語】 C# 5.0, JavaScript<br />
+					【OS】 Windows<br />
+					【管理ツール】 Salesforce
+				</td>
+			</tr>
+			<tr>
+				<th>業務内容</th>
+				<td data-label="業務内容">
+					地理空間情報ソフト、タッチパネル機器組み込みソフトにおける保守改修。<br />
+					新卒で初めての現場だったが、既存開発メンバーも不在で開発資料もなくリバースエンジニアリングを行いながら一人で保守・開発を担い、課題解決やタスク管理の能力を磨く。
+				</td>
+			</tr>
+		</table>
+	</section>
+
+	<!-- 
+	<h3 class="align-center">｛　その他役割　｝</h3>
+	<table class="main">
+		<tr>
+			<th width="30%">役割</th>
+			<th width="70%">内容</th>
+		</tr>
+		<tr>
+			<td data-label="役割">
+				<b>社員総会 運営幹事</b>
+			</td>
+			<td data-label="内容">
+				年度ごとの報告・親睦行事の司会進行を務める。全社員向けコミュニケーション研修の講師に立候補し、「コンセンサスゲーム」をテーマに講演を行う。
+			</td>
+		</tr>
+		<tr>
+			<td data-label="役割">
+				<b>採用面接</b>
+			</td>
+			<td data-label="内容">
+				新入社員採用面接にて若手社員代表として参加し、アイスブレイクや懇談を行う。
+			</td>
+		</tr>
+	</table> -->
+
+	<!-- <h2 class="add-margin uline align-center">個人制作</h2>
+	<h3 class="align-center">｛　WordPressサイト運営　｝</h3>
+	<blockquote>
+		旅ブログ「<a href="https://t-hsn.com/">HASH TRIP</a>」<a href="https://t-hsn.com/">https://t-hsn.com/</a><br />
+		2018年6月から、フロントエンド学習のために独学でWordPressサイト構築。<br />
+		CSSデザイン、PHPテンプレートの改造、JavaScriptでの自作機能、SEO対策、SNS活用について学ぶ。
+	</blockquote> -->
+</div>
+</body>
+</html>
