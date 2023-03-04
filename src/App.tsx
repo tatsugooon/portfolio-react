@@ -113,7 +113,7 @@ function App() {
                             <br />
                             ストーリーを重視して明確かつシンプルに構成することを心がけています。
                         </p>
-                        <a href="/career.html" className='underline flex gap-2'>
+                        <a href="https://t-hsn.com/portfolio/career.html" className='underline flex gap-2'>
                             More Profile
                             <img src={arrow} alt="arrow" />
                         </a>
