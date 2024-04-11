@@ -191,19 +191,24 @@ function App() {
                     <div id='section-content-4' className='flex flex-col items-center mx-4 my-8 gap-8'>
                         <h2 className='text-3xl font-oswald'>Experiences.</h2>
                         <div className='max-w-xs w-full'>
+                            <h3 className='text-sm'>株式会社TENTIAL</h3>
+                            <p className='text-xl'>System Engineer</p>
+                            <p className='text-sm'>2023 -</p>
+                        </div>
+                        <div className='max-w-xs w-full'>
                             <h3 className='text-sm'>リマールエステート株式会社</h3>
                             <p className='text-xl'>Project manager and ui designer</p>
-                            <p className='text-sm'>2022 ー</p>
+                            <p className='text-sm'>2022 - 2023</p>
                         </div>
                         <div className='max-w-xs w-full'>
                             <h3 className='text-sm'>株式会社ノートスペース</h3>
                             <p className='text-xl'>System Engineer</p>
-                            <p className='text-sm'>2019 ー 2022</p>
+                            <p className='text-sm'>2019 - 2022</p>
                         </div>
                         <div className='max-w-xs w-full'>
                             <h3 className='text-sm'>株式会社クレスト</h3>
                             <p className='text-xl'>Programmer</p>
-                            <p className='text-sm'>2017 ー 2019</p>
+                            <p className='text-sm'>2017 - 2019</p>
                         </div>
                     </div>
                 </section>
